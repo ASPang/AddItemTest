@@ -1,0 +1,27 @@
+@import "_variables";
+@import "_mixin";
+
+.search-box-container {
+  width: 100%;
+
+  label {
+    @extend %helvetica-normal;
+
+    font-size: 16px;
+    line-height: 36px;
+    color: $clr-white;
+  }
+
+  input {
+    height: 50px;
+    margin-bottom: 0px;
+
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-image: url("http://localhost:9000/img/search-icon.png");
+
+    @media (max-width: 767px) {
+      margin-bottom: 20px;
+    }
+  }
+}

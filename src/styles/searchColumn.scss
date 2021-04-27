@@ -1,0 +1,12 @@
+#searchColumn {
+  display: flex;
+  flex-direction: column;
+  height: 535px;
+  margin-right: 5px;
+
+  @media (min-width: 768px) {
+    .button-add {
+      margin-top: auto;
+    }
+  }
+}

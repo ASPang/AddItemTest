@@ -1,0 +1,129 @@
+@import "_variables";
+@import "_mixin";
+
+body {
+  background-color: $clr-grey;
+  font-family: Helvetica;
+}
+
+#root {
+  display: flex;
+  justify-content: center;
+  > div {
+    width: 940px;
+    @media (max-width: 767px) {
+      width: 100%;
+    }
+  }
+}
+
+h1 {
+  @extend %merriweather-italic;
+  font-size: 72px;
+  color: $clr-white;
+  text-align: left;
+  margin-bottom: 30px;
+}
+
+p {
+  width: 552px;
+  font-size: 23px;
+  line-height: 30px;
+  color: $clr-blue;
+  font-family: Helvetica;
+  text-align: left;
+  margin-bottom: 75px;
+
+  @media (max-width: 767px) {
+    width: auto;
+  }
+}
+
+.add-item-header {
+  @extend %flex-container;
+  @extend %helvetica-normal;
+
+  font-size: 24px;
+  line-height: 36px;
+  color: $clr-white;
+  text-align: center;
+  height: 55px;
+  background-image: linear-gradient(
+    0deg,
+    #818fa1 0%,
+    rgba(153, 167, 185, 0.6) 100%
+  );
+  margin-bottom: 20px;
+}
+
+input::placeholder {
+  @extend %helvetica-light;
+  font-size: 16px;
+  line-height: 20px;
+  color: $clr-white;
+  font-weight: 300;
+  font-family: Helvetica;
+  opacity: 0.5;
+}
+input {
+  height: 50px;
+  @media (max-width: 767px) {
+    width: 92%;
+  }
+}
+input,
+select {
+  @extend %helvetica-normal;
+  border: $brd-white;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin-bottom: 10px;
+  padding: 10px;
+  font-size: 24px;
+  line-height: 36px;
+}
+
+label {
+  color: white;
+}
+
+.sr-only {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+button {
+  display: inline-block;
+  margin: 0;
+  text-decoration: none;
+  background: transparent;
+  line-height: 1;
+  cursor: pointer;
+  text-align: center;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  > .flex-col {
+    flex: 1;
+    flex-shrink: 0;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 767px) {
+  .flex-container {
+    flex-direction: column;
+  }
+}
+
+.item-container {
+  text-transform: uppercase;
+}

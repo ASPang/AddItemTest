@@ -1,0 +1,57 @@
+@import "_variables";
+@import "_mixin";
+
+.item-column {
+  background-color: $clr-grey;
+  border: $brd-white;
+
+  .item-column-header {
+    @extend %flex-container;
+    height: 65px;
+    background-image: linear-gradient(0deg, #495468 0%, #b8c8db 100%);
+  }
+  h3 {
+    @extend %helvetica-normal;
+    font-size: 20px;
+    line-height: 36px;
+    color: $clr-white;
+    text-align: center;
+    margin: 0px;
+  }
+
+  .item-column-row {
+    @extend %flex-container;
+    @extend %helvetica-light;
+
+    min-height: 65px;
+    background-color: $clr-white;
+    font-size: 23px;
+    text-align: left;
+    padding: 10px 30px;
+
+    .item-colunm-text {
+      flex: 1;
+      word-break: break-word;
+    }
+
+    &:nth-child(odd) {
+      color: $clr-grey;
+      opacity: 0.9;
+      background-color: rgba(255, 255, 255, 0.9);
+      .button-remove {
+        color: $clr-grey;
+        border: 2px solid $clr-grey;
+      }
+    }
+
+    &:nth-child(even) {
+      color: $clr-white;
+      background-color: rgba(255, 255, 255, 0.5);
+
+      .button-remove {
+        color: $clr-white;
+        border: 2px solid $clr-white;
+      }
+    }
+  }
+}

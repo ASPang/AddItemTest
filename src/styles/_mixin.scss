@@ -1,0 +1,34 @@
+//--- FONTS ---
+@font-face {
+    font-family: Merriweather;
+    src: url(http://www.google.com/fonts/specimen/Merriweather);
+}
+%merriweather-italic { 
+    font-weight: 300;
+    font-style: italic;
+    font-family: "Merriweather";
+}
+%helvetica-base {   
+    letter-spacing: 1px;
+    font-family: Helvetica;
+    text-transform: uppercase;
+}
+%helvetica-light {
+    font-weight: 300;
+    @extend %helvetica-base;
+}
+%helvetica-normal {
+    font-weight: 500;
+    @extend %helvetica-base;
+}
+%helvetica-bold {
+    font-weight: 700;
+    @extend %helvetica-base;
+}
+
+//--- FLEX ---
+%flex-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

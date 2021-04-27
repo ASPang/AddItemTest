@@ -1,0 +1,23 @@
+@import "_variables";
+@import "_mixin";
+
+select {
+  width: 100%;
+  padding: 5px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  height: 73px;
+  color: $clr-white;
+
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-image: url("http://localhost:9000/img/dropdown-arrow.png");
+  
+  option {
+    color: $clr-black;
+  }
+}
+select::-ms-expand {
+  display: none; /* Remove default arrow in Internet Explorer 10 and 11 */
+}
